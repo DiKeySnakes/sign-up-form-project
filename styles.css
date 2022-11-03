@@ -1,0 +1,61 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: hsla(0, 2%, 8%, 1);
+}
+
+.main-container {
+  display: flex;
+  width: 70%;
+  height: 100vh;
+  background-color: whitesmoke;
+  margin: 0 auto;
+}
+
+.image-container {
+  width: 35%;
+  text-align: center;
+  background-image: url('images/halie-west-25xggax4bSA-unsplash.jpg');
+  background-size: cover;
+}
+
+.logo-container {
+  height: 9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15rem auto;
+  background-color: hsla(0, 2%, 8%, 0.5);
+}
+
+.logo {
+  width: 6rem;
+  height: auto;
+}
+
+.logo-title {
+  font-family: Fredericka the Great;
+  color: whitesmoke;
+  font-size: 5rem;
+  text-align: center;
+}
+
+.image-link {
+  color: whitesmoke;
+}
+
+a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+.form-container {
+  width: 65%;
+}
