@@ -14,6 +14,7 @@
       src="https://kit.fontawesome.com/63a987d3b1.js"
       crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
     <div class="main-container">
@@ -46,64 +47,85 @@
         </header>
         <div class="title">Let's do this!</div>
         <div class="content">
-          <form action="#" method="get">
+          <form id="form" action="/" method="GET">
             <div class="user-details">
               <div class="input-box">
-                <label for="first-name">FIRST NAME</label>
+                <label for="first-name" title="Letters only">FIRST NAME</label>
                 <input
                   type="text"
                   name="first-name"
                   id="first-name"
-                  placeholder="Enter your first name"
+                  placeholder="Thor"
+                  pattern="^[^0-9]+$"
+                  size="30"
+                  maxlength="245"
                   required />
               </div>
               <div class="input-box">
-                <label for="last-name">LAST NAME</label>
+                <label for="last-name" title="Letters only">LAST NAME</label>
                 <input
                   type="text"
                   name="last-name"
                   id="last-name"
-                  placeholder="Enter your last name"
+                  placeholder="Odinson"
+                  pattern="^[^0-9]+$"
+                  size="30"
+                  maxlength="245"
                   required />
               </div>
               <div class="input-box">
-                <label for="email">EMAIL</label>
+                <label for="email" title="Format email@email.com">EMAIL</label>
                 <input
                   type="email"
                   name="email"
                   id="email"
-                  placeholder="Enter your email"
+                  size="30"
+                  maxlength="100"
+                  placeholder="email@email.com"
                   required />
               </div>
               <div class="input-box">
-                <label for="phone-number">PHONE NUMBER</label>
+                <label for="phone-number" title="Phone format 123-456-7890"
+                  >PHONE NUMBER</label
+                >
                 <input
                   type="tel"
                   name="phone-number"
                   id="phone-number"
-                  placeholder="Enter your phone number"
+                  placeholder="123-456-7890"
+                  pattern="\d{3}[\-]\d{3}[\-]\d{4}"
                   required />
               </div>
               <div class="input-box">
-                <label for="password">PASSWORD</label>
+                <label
+                  for="password"
+                  title="Password (UpperCase, LowerCase, Number/SpecialChar and min 8 Chars)"
+                  >PASSWORD</label
+                >
                 <input
                   type="password"
                   name="password"
                   id="password"
                   placeholder="Enter your password"
+                  pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
                   required />
               </div>
               <div class="input-box">
-                <label for="confirm-password">CONFIRM PASSWORD</label>
+                <label
+                  for="confirm-password"
+                  title="Password (UpperCase, LowerCase, Number/SpecialChar and min 8 Chars)"
+                  >CONFIRM PASSWORD</label
+                >
                 <input
                   type="password"
                   name="confirm-password"
                   id="confirm-password"
                   placeholder="Confirm your password"
+                  pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
                   required />
               </div>
               <div class="button">
-                <input type="submit" value="Create Account" />
+                <button type="submit">Create Account</button>
               </div>
             </div>
           </form>
