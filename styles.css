@@ -98,6 +98,10 @@ label {
   margin-bottom: 5px;
 }
 
+label:hover {
+  cursor: help;
+}
+
 input {
   height: 2.8rem;
   width: 100%;
@@ -204,4 +208,21 @@ button:hover {
 
 #icon:hover {
   transform: rotate(360deg) scale(1.2);
+}
+
+.input-checkbox {
+  margin-bottom: 1rem;
+  width: calc(100% / 2 - 1.25rem);
+  display: flex;
+  align-items: center;
+}
+
+.input-checkbox input {
+  width: 1rem;
+  height: 1rem;
+}
+
+.input-checkbox > input:focus {
+  transform: none;
+  box-shadow: none;
 }

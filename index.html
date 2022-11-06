@@ -14,7 +14,7 @@
       src="https://kit.fontawesome.com/63a987d3b1.js"
       crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script>
+    <script defer src="script.js"></script>
   </head>
   <body>
     <div class="main-container">
@@ -47,7 +47,7 @@
         </header>
         <div class="title">Let's do this!</div>
         <div class="content">
-          <form id="form" action="/" method="GET">
+          <form id="form" action="/" method="get">
             <div class="user-details">
               <div class="input-box">
                 <label for="first-name" title="Letters only">FIRST NAME</label>
@@ -123,6 +123,20 @@
                   placeholder="Confirm your password"
                   pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
                   required />
+              </div>
+              <div class="input-checkbox">
+                <input
+                  type="checkbox"
+                  name="showPassword"
+                  onclick="changeTypeX()" />
+                <label for="showPassword">Show password</label>
+              </div>
+              <div class="input-checkbox">
+                <input
+                  type="checkbox"
+                  name="showConfirmPassword"
+                  onclick="changeTypeY()" />
+                <label for="showConfirmPassword">Show password</label>
               </div>
               <div class="button">
                 <button type="submit">Create Account</button>
