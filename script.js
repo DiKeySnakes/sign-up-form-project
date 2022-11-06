@@ -1,5 +1,8 @@
+const x = document.getElementById('password');
+const y = document.getElementById('confirm-password');
+const form = document.getElementById('form');
+
 function changeTypeX() {
-  const x = document.getElementById('password');
   if (x.type === 'password') {
     x.type = 'text';
   } else {
@@ -8,10 +11,16 @@ function changeTypeX() {
 }
 
 function changeTypeY() {
-  const y = document.getElementById('confirm-password');
   if (y.type === 'password') {
     y.type = 'text';
   } else {
     y.type = 'password';
   }
 }
+
+form.addEventListener('submit', (e) => {
+  if (x.value !== y.value) {
+    e.preventDefault();
+    alert('Your passwords do not match!');
+  }
+});
